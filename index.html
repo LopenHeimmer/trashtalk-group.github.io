@@ -225,7 +225,7 @@
         const clone = marqueeContent.cloneNode(true);
         marqueeContent.parentElement.appendChild(clone);
 
-        // Kalkulator Jejak Sampah Logic
+       // Kalkulator Jejak Sampah Logic
         function hitungSampah() {
             let botol = parseInt(document.getElementById('botolInput').value) || 0;
             let bungkus = parseInt(document.getElementById('bungkusInput').value) || 0;
@@ -237,12 +237,15 @@
             let hasilDiv = document.getElementById('hasilKalkulasi');
             let pesan = "";
             
+            // Kontrol logika baru yang lebih bertahap
             if (totalTahunan === 0) {
                 pesan = "Luar biasa! 0 sampah plastik. Kamu pahlawan lingkungan sejati.";
-            } else if (totalTahunan <= 150) {
-                pesan = `Dalam setahun di sekolah, kamu menyumbang ${totalTahunan} sampah plastik. Masih bisa dikurangi lagi ya!`;
+            } else if (totalHarian === 1) {
+                pesan = `Sehari cuma 1, tapi dalam setahun jadi ${totalTahunan} sampah plastik. Masih oke, tapi coba perbaiki lagi yuk pakai tumbler atau kotak makan sendiri!`;
+            } else if (totalHarian <= 4) {
+                pesan = `Wah, sehari rata-rata ${totalHarian} sampah, setahun jadi ${totalTahunan} sampah plastik. Udah lumayan banyak nih, pelan-pelan mulai dikurangi ya!`;
             } else {
-                pesan = `AWAS! Kamu akan menumpuk ${totalTahunan} sampah plastik setahun. Bayangkan kalau satu angkatan melakukan hal yang sama, sekolah bisa tenggelam dalam sampah! Mulai kurangi hari ini.`;
+                pesan = `AWAS! Kamu menumpuk ${totalTahunan} sampah plastik setahun. Bayangkan kalau satu sekolah melakukan hal yang sama, bisa tenggelam dalam sampah! Mulai drastis kurangi hari ini.`;
             }
             
             hasilDiv.innerHTML = pesan;
