@@ -28,7 +28,8 @@ body {
 h1, h2, h3, .poster-text {
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
-    line-height: 0.95
+    line-height: 1
+    
     ;
 }
 
