@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Action | #TrashTalk</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Terhubung ke CSS utama -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* CSS Khusus Layout Halaman Detail */
+        .detail-page {
+            padding-top: 12rem;
+            padding-bottom: 6rem;
+        }
+        
+        .page-title {
+            font-size: clamp(4rem, 10vw, 8rem);
+            color: var(--neon-yellow);
+            text-align: center;
+            margin-bottom: 4rem;
+            text-shadow: 6px 6px 0 var(--electric-blue);
+        }
+
+        .detail-card {
+            background: var(--black);
+            border: 4px solid var(--electric-blue);
+            padding: 4rem 3rem;
+            margin-bottom: 5rem;
+            position: relative;
+            box-shadow: 16px 16px 0 var(--hot-pink);
+            transition: transform 0.3s;
+        }
+        
+        .detail-card:nth-child(even) {
+            border-color: var(--neon-yellow);
+            box-shadow: -16px 16px 0 var(--electric-blue);
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .detail-num {
+            font-family: 'Anton', sans-serif;
+            font-size: 6rem;
+            color: var(--hot-pink);
+            position: absolute;
+            top: -50px;
+            left: -20px;
+            text-shadow: 4px 4px 0 var(--black);
+            -webkit-text-stroke: 2px var(--white);
+            line-height: 1;
+            z-index: 2;
+        }
+        
+        .detail-card:nth-child(even) .detail-num {
+            color: var(--neon-yellow);
+            left: auto;
+            right: -20px;
+        }
+        
+        .detail-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 2rem;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+        
+        .detail-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .detail-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .detail-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-left: 6px solid var(--neon-yellow);
+        }
+        
+        .detail-card:nth-child(even) .detail-box {
+            border-left-color: var(--hot-pink);
+        }
+        
+        .detail-box h4 {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        .detail-box p {
+            font-size: 1.1rem;
+            color: #ddd;
+            line-height: 1.6;
+        }
+        
+        .back-btn-container {
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor"></div>
+
+    <!-- NAVIGATION BAR (Link mengarah kembali ke utama.html) -->
+    <nav class="navbar">
+        <div class="nav-brand">#TrashTalk</div>
+        <ul class="nav-links">
+            <li><a href="utama.html#hero" class="hover-target">Home</a></li>
+            <li><a href="utama.html#context" class="hover-target">Fakta</a></li>
+            <li><a href="utama.html#action" class="hover-target">Aksi</a></li>
+            <li><a href="utama.html#calculator" class="hover-target">Kalkulator</a></li>
+            <li><a href="utama.html#movie" class="hover-target">Movie</a></li>
+        </ul>
+    </nav>
+
+    <!-- DETAIL CONTENT SECTION -->
+    <section class="detail-page">
+        <div class="container">
+            <h1 class="page-title reveal">HOW TO DO IT</h1>
+            
+            <div class="detail-card reveal" style="transition-delay: 0.1s;">
+                <div class="detail-num">1</div>
+                <h2 class="detail-title">PILAH SAMPAHMU</h2>
+                <div class="detail-content">
+                    <div class="detail-box">
+                        <h4>MENGAPA INI PENTING?</h4>
+                        <p>Sampah yang tercampur (seperti kertas bersih yang kena tumpahan kuah makanan) akan rusak dan tidak bisa didaur ulang. Berakhirnya pasti numpuk di TPA dan jadi gas beracun.</p>
+                    </div>
+                    <div class="detail-box">
+                        <h4>CARA MULAINYA:</h4>
+                        <p>Biasakan melihat label di tempat sampah sekolah. Jika ada botol plastik, kosongkan isinya dulu, remas botolnya agar hemat tempat, lalu buang ke tempat sampah anorganik.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card reveal" style="transition-delay: 0.2s;">
+                <div class="detail-num">2</div>
+                <h2 class="detail-title">KURANGI PLASTIK</h2>
+                <div class="detail-content">
+                    <div class="detail-box">
+                        <h4>MENGAPA INI PENTING?</h4>
+                        <p>Plastik butuh waktu ratusan tahun untuk terurai. Sebagian besar plastik yang pernah diproduksi di dunia ini masih ada sampai sekarang dalam bentuk mikroplastik.</p>
+                    </div>
+                    <div class="detail-box">
+                        <h4>CARA MULAINYA:</h4>
+                        <p>Simpan tas belanja lipat kecil di bagasi motor BeAT kamu biar nggak perlu minta kantong plastik baru saat mampir beli barang atau jajan sepulang sekolah. Bawa tumbler sendiri juga wajib.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card reveal" style="transition-delay: 0.3s;">
+                <div class="detail-num">3</div>
+                <h2 class="detail-title">HABISKAN MAKANAN</h2>
+                <div class="detail-content">
+                    <div class="detail-box">
+                        <h4>MENGAPA INI PENTING?</h4>
+                        <p>Food waste adalah salah satu penyumbang gas metana terbesar. Gas ini jauh lebih parah efeknya bikin bumi makin panas dibandingkan emisi kendaraan.</p>
+                    </div>
+                    <div class="detail-box">
+                        <h4>CARA MULAINYA:</h4>
+                        <p>Kalau makan di kantin, pesan porsi yang memang muat di perutmu. Jangan ragu minta porsi nasi setengah kalau kamu memang tidak bisa makan banyak.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card reveal" style="transition-delay: 0.4s;">
+                <div class="detail-num">4</div>
+                <h2 class="detail-title">GUNAKAN KEMBALI</h2>
+                <div class="detail-content">
+                    <div class="detail-box">
+                        <h4>MENGAPA INI PENTING?</h4>
+                        <p>Konsep *Reuse* memperpanjang umur barang dan menekan kebutuhan pabrik untuk terus-menerus memproduksi barang baru dari sumber daya alam.</p>
+                    </div>
+                    <div class="detail-box">
+                        <h4>CARA MULAINYA:</h4>
+                        <p>Sebelum membuang kertas HVS, pastikan sebaliknya sudah terpakai. Sisi yang masih kosong bisa dipotong untuk coret-coretan ngerjain soal mekanika Fisika atau ngedraf logika kodingan C++ kamu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card reveal" style="transition-delay: 0.5s;">
+                <div class="detail-num">5</div>
+                <h2 class="detail-title">AJAK ORANG LAIN</h2>
+                <div class="detail-content">
+                    <div class="detail-box">
+                        <h4>MENGAPA INI PENTING?</h4>
+                        <p>Aksi individu itu bagus, tapi gerakan kolektif dampaknya masif. Normalisasi budaya peduli lingkungan harus dimulai dari interaksi sehari-hari.</p>
+                    </div>
+                    <div class="detail-box">
+                        <h4>CARA MULAINYA:</h4>
+                        <p>Mulai dari circle pertemanan sendiri. Tegur teman sekelas kalau mereka meninggalkan sampah di kolong meja, atau *share* info ini saat ngobrol di tongkrongan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-btn-container reveal">
+                <a href="utama.html" class="btn btn-secondary hover-target">KEMBALI KE BERANDA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="brand">#TrashTalk</div>
+                <div class="copyright">© 2026 #TrashTalk. All Rights Reserved.<br>SMA Negeri 3 Bandung - STEM SDGs Project.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Custom Cursor Logic
+        const cursor = document.querySelector('.cursor');
+        const hoverTargets = document.querySelectorAll('a, .hover-target');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        hoverTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+            target.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
